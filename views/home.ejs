@@ -1,0 +1,11 @@
+<%- include("partials/header") -%> 
+<form class="item" action="/compose" method="GET">
+  <button class = "blog-btn" type="submit">Compose</button>
+</form>
+<div class="postt">
+<% for(post of content){%>
+<h1><%=post.title%></h1>
+<p><%=post.body.slice(0,100)+'...'%><a href="/post/<%=post.title%>"> Read More</a></p>
+<%}%> 
+</div>
+<%- include("partials/footer") -%>
